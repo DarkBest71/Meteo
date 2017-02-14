@@ -1,0 +1,11 @@
+{
+  "modules" : { 
+    "meteo"  : {
+      "description": "Recherche la météo en ligne",
+      "version": "3.16",
+      "zip": "032030",
+      "date": "3",
+	  "Auteur": "Avatar Rousseau (Dark Best)"
+    }
+  }
+}

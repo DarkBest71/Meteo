@@ -1,0 +1,55 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleMeteo" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+<rule id="ruleMeteo" scope="public">
+<example>Sarah quelle est la météo pour demain ?</example>
+<tag>out.action=new Object(); </tag>
+<!-- <item>Sarah</item> -->
+<one-of>
+<item>Quelle est la météo</item>
+<item>Quelle est le temps</item>
+<item>Est-ce qu'il pleut</item>
+<item>Donne la météo</item>
+<item>Affiche la météo</item>
+<item>Quelle son les prévision de la météo</item>
+<item>Comment dois-je m'habiller</item>
+</one-of>
+
+<item repeat="0-1">
+<one-of>
+<item>Aujourd'hui<tag>out.action.date="0";</tag></item>
+<item>En ce moment<tag>out.action.date="0";</tag></item>
+<item>Maintenant<tag>out.action.date="0";</tag></item>
+<item>Ce soir<tag>out.action.date="0_soir";</tag></item>
+<item>Cette nuit<tag>out.action.date="0_soir";</tag></item>
+<item>Demain<tag>out.action.date="1_matin";</tag></item>
+<item>Après demain<tag>out.action.date="2_matin";</tag></item>
+</one-of>
+</item>
+
+<item repeat="0-1">
+<item>à</item>
+<one-of>
+<item>Versailles <tag> out.action.zip="786460"; </tag></item>
+<item>Bordeaux <tag> out.action.zip="330630"; </tag></item>
+<item>Bègles <tag> out.action.zip="330390"; </tag></item>
+<item>Blanquefort <tag> out.action.zip="320560"; </tag></item>
+<item>Avermes <tag> out.action.zip="030130"; </tag></item>
+<item>Troyes<tag> out.action.zip="103870"; </tag></item>
+<item>Rouen <tag> out.action.zip="765400"; </tag></item>
+<item>Paris <tag> out.action.zip="750560"; </tag></item>
+<item>Nice <tag> out.action.zip="315550"; </tag></item>
+<item>Allier <tag> out.action.zip="650050"; </tag></item>
+<item>Moulins <tag> out.action.zip="031900"; </tag></item>
+<item>Vichy <tag> out.action.zip="033100"; </tag></item>
+<item>Clermont-Férrand <tag> out.action.zip="631130"; </tag></item>
+<item>Nevers <tag> out.action.zip="581940"; </tag></item>
+<item>Avermes <tag> out.action.zip="030130"; </tag></item>
+<item>Poitiers <tag> out.action.zip="861940"; </tag></item>
+<item>Lyon <tag> out.action.zip="691230"; </tag></item>
+<item>Marseille <tag> out.action.zip="130550"; </tag></item>
+<item>Strasbourg <tag> out.action.zip="674820"; </tag></item>
+<item>Bourges <tag> out.action.zip="180330"; </tag></item>
+</one-of>
+</item> 
+<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/meteo";</tag>
+</rule> 
+</grammar>

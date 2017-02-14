@@ -1,0 +1,8 @@
+.plugin-gridster.meteo .front {
+  background: #000000;
+}
+.plugin-gridster.meteo .back {
+  background: #B5E655 url('images/images01.png') center 34px;
+  background-size:   72px 61px;
+  background-repeat: no-repeat;
+}
